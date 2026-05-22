@@ -1,0 +1,11 @@
+timeStamp,elapsed,label,responseCode,success,bytes
+1779062400000,142,POST /auth/login,200,true,1240
+1779062402000,98,GET /user/profile,200,true,3410
+1779062404000,211,GET /dashboard,200,true,8920
+1779062406000,87,GET /api/notifications,200,true,512
+1779062408000,134,POST /api/session/refresh,200,true,320
+1779062410000,175,GET /api/feed,200,true,12480
+1779062412000,93,GET /api/settings,200,true,2100
+1779062414000,108,PUT /api/user/preferences,200,true,640
+1779062416000,156,GET /api/activity,200,true,5320
+1779062418000,201,POST /auth/logout,200,true,180

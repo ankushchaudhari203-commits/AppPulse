@@ -1,0 +1,13 @@
+timeStamp,elapsed,label,responseCode,success,bytes
+1779148800000,188,POST /auth/login,200,true,1240
+1779148802000,310,GET /products/list,200,true,24800
+1779148804000,145,GET /products/12345,200,true,6720
+1779148806000,97,POST /cart/add,200,true,420
+1779148808000,263,GET /cart,200,true,3840
+1779148810000,1820,POST /checkout/init,500,false,890
+1779148812000,412,POST /checkout/init,200,true,1640
+1779148814000,178,GET /checkout/summary,200,true,5120
+1779148816000,2340,POST /payment/process,504,false,220
+1779148818000,890,POST /payment/process,200,true,980
+1779148820000,134,GET /order/confirmation,200,true,3200
+1779148822000,112,POST /cart/clear,200,true,180

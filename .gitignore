@@ -1,0 +1,49 @@
+# JMeter runtime (153MB — too large for GitHub; install separately)
+jmeter/
+
+# Runtime data files
+test_runs.json
+jmeter_runs.json
+locust_runs.json
+health_history.json
+generated_suites.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+DerivedData/
+*.xcresult
+*.moved-aside
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+*.xcscmblueprint
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+Pods/
+.build/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
+
+# Dev images
+AppPulse_fixed*.png
