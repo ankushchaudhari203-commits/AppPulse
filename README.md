@@ -187,4 +187,4 @@ AppPulse/
 
 ## Author
 
-Built by Ankush Chaudhari — QE Lead
+Built by Ankush Chaudhari — Business Systems Analyst
