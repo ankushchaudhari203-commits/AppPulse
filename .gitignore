@@ -47,3 +47,7 @@ Pods/
 
 # Dev images
 AppPulse_fixed*.png
+
+# Release build artifacts
+AppPulse_release/
+AppPulse_release.zip
