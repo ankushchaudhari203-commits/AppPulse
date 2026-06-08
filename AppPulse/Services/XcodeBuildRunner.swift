@@ -13,7 +13,7 @@ final class XcodeBuildRunner: ObservableObject {
         guard !projectPath.isEmpty, !scheme.isEmpty else { throw RunnerError.notConfigured }
 
         let resultURL = FileManager.default.temporaryDirectory
-            .appendingPathComponent("AppPulse_\(Int(Date().timeIntervalSince1970)).xcresult")
+            .appendingPathComponent("\(scheme)_\(Int(Date().timeIntervalSince1970)).xcresult")
         try? FileManager.default.removeItem(at: resultURL)
 
         isRunning   = true
