@@ -41,6 +41,7 @@ private let pages: [OnboardingPage] = [
         title: "Functional Tests",
         subtitle: "Run Xcode tests directly or import .xcresult bundles to track your test suite health over time.",
         bullets: [
+            ("gearshape",              .gray,   "First, go to Settings → Tools and set your Xcode project path, scheme (e.g. MyApp), and destination"),
             ("play.fill",              .green,  "Click Run Tests to trigger xcodebuild — results import automatically"),
             ("plus.circle",            .blue,   "Or click + or drag & drop a .xcresult file to import manually"),
             ("chart.pie.fill",         .green,  "See pass rate ring, failed tests, and per-test-case drill-down"),
@@ -53,8 +54,9 @@ private let pages: [OnboardingPage] = [
         title: "Performance Testing",
         subtitle: "Two powerful load testing tools in one tab — switch between JMeter and Locust using the picker in the sidebar.",
         bullets: [
+            ("bolt.fill",              .yellow, "Quick Load Test: enter any URL, pick HTTP (GET/POST/PUT/DELETE/PATCH) or WebSocket — no .jmx file needed"),
+            ("lock.shield",            .blue,   "Quick Test supports auth: Bearer Token, API Key, Basic Auth, or Custom Header"),
             ("play.fill",              .orange, "JMeter: click Run .jmx to run a test plan headless — results auto-import"),
-            ("bolt.horizontal",        .blue,   "Or launch the JMeter GUI and import the .jtl file manually"),
             ("ant.fill",               .green,  "Locust: pick a locustfile.py, set users & spawn rate, AppPulse starts the test"),
             ("chart.xyaxis.line",      .purple, "Live Locust charts: RPS, response time, active users, fail ratio"),
         ]

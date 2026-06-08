@@ -36,25 +36,19 @@ class AppStore: ObservableObject {
     private var autoRefreshCancellable: AnyCancellable?
     private var prevHealthStatuses: [String: HealthCheck.HealthStatus] = [:]
 
-    private static let jmeterStorageURL: URL = FileManager.default
-        .homeDirectoryForCurrentUser
-        .appendingPathComponent("Desktop/AppPulse/jmeter_runs.json")
+    private static let appSupportURL: URL = {
+        let url = FileManager.default
+            .urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent("AppPulse")
+        try? FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
+        return url
+    }()
 
-    private static let testRunsStorageURL: URL = FileManager.default
-        .homeDirectoryForCurrentUser
-        .appendingPathComponent("Desktop/AppPulse/test_runs.json")
-
-    private static let generatedSuitesStorageURL: URL = FileManager.default
-        .homeDirectoryForCurrentUser
-        .appendingPathComponent("Desktop/AppPulse/generated_suites.json")
-
-    private static let locustRunsStorageURL: URL = FileManager.default
-        .homeDirectoryForCurrentUser
-        .appendingPathComponent("Desktop/AppPulse/locust_runs.json")
-
-    private static let healthHistoryStorageURL: URL = FileManager.default
-        .homeDirectoryForCurrentUser
-        .appendingPathComponent("Desktop/AppPulse/health_history.json")
+    private static var jmeterStorageURL:       URL { appSupportURL.appendingPathComponent("jmeter_runs.json") }
+    private static var testRunsStorageURL:      URL { appSupportURL.appendingPathComponent("test_runs.json") }
+    private static var generatedSuitesStorageURL: URL { appSupportURL.appendingPathComponent("generated_suites.json") }
+    private static var locustRunsStorageURL:    URL { appSupportURL.appendingPathComponent("locust_runs.json") }
+    private static var healthHistoryStorageURL: URL { appSupportURL.appendingPathComponent("health_history.json") }
 
     init() {
         jmeterRuns      = Self.loadJSON(from: Self.jmeterStorageURL)
