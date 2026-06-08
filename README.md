@@ -181,7 +181,7 @@ AppPulse/
 
 - App Sandbox is disabled to allow running shell tools (xcodebuild, jmeter, locust)
 - AppPulse cannot run UI tests against itself — use it to test other projects (e.g. a separate iOS app)
-- JSON data files (`test_runs.json`, `jmeter_runs.json`, etc.) are excluded from the repo — they are generated at runtime
+- JSON data files (`test_runs.json`, `jmeter_runs.json`, etc.) are excluded from the repo — they are generated at runtime and stored in `~/Library/Application Support/AppPulse/`
 
 ---
 
